@@ -1,0 +1,17 @@
+<% content_for :styles do %>
+  <style>
+      html, body, .container {
+          height: 100%;
+      }
+  </style>
+<% end %>
+
+<% content_for :body do %>
+  <body class="h-100">
+    <div class="container auth-form-container d-flex">
+      <%= yield %>
+    </div>
+  </body>
+<% end %>
+
+<%= render template: 'layouts/application' %>

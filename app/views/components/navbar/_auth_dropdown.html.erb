@@ -1,0 +1,24 @@
+<% actions = [
+  { title: 'Sign in', path: new_user_session_path, icon: 'bi bi-key-fill' },
+  { title: 'Create account', path: new_user_registration_path, icon: 'bi bi-person-plus-fill' }
+] %>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"
+     href="#"
+     id="navbarDropdown"
+     role="button"
+     data-bs-toggle="dropdown"
+     aria-expanded="false">
+    Not signed in
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+    <% actions.each do |params| %>
+      <li>
+        <%= link_to tag.i(class: params[:icon] + ' me-2') + params[:title],
+                    params[:path],
+                    class: 'dropdown-item' %>
+      </li>
+    <% end %>
+  </ul>
+</li>
