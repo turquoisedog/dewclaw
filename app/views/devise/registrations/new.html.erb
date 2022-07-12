@@ -19,6 +19,21 @@
       <hr>
 
       <div class="form-floating mb-3 w-100">
+        <%= f.text_field :display_name, class: "form-control", placeholder: "" %>
+        <%= f.label :display_name %>
+      </div>
+
+      <div class="form-floating mb-3 w-100">
+        <%= f.text_field :handle, class: "form-control", placeholder: "" %>
+        <%= f.label :handle %>
+        <div class="form-text">
+          Your URL slug, and the handle people mention you with.
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="form-floating mb-3 w-100">
         <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "" %>
         <%= f.label :password %>
       </div>
