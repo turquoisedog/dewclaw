@@ -19,6 +19,10 @@ $dropdown-dark-link-active-bg: darken($dark, 5%);
 $input-border-color: lighten($body-bg, 25%);
 $form-check-input-border: 1px solid $input-border-color;
 
+.turbo-progress-bar {
+  background-color: $primary;
+}
+
 .dropdown-divider {
   border: none;
   height: 2px !important;

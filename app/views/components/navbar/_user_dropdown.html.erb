@@ -8,8 +8,11 @@
     <%= image_tag 'no_avatar.svg', class: 'avatar' %>
   </a>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li>
+      <%= link_to tag.i(class: 'bi bi-person me-2') + 'Profile',
+                  show_profile_path(current_user.handle),
+                  class: 'dropdown-item' %>
+    </li>
     <li><hr class="dropdown-divider"></li>
     <li>
       <%= link_to tag.i(class: 'bi bi-door-closed me-2') + 'Sign out',
