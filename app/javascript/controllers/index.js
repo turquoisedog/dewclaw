@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import ToastController from "./toast_controller.js"
 application.register("toast", ToastController)
+
+import UploaderController from "./uploader_controller.js"
+application.register("uploader", UploaderController)

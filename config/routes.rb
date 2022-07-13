@@ -5,8 +5,9 @@ Rails.application.routes.draw do
     passwords: 'auth/passwords'
   }
 
-  resource :profile, only: [:edit, :update]
+  resources :works
 
+  resource :profile, only: [:edit, :update]
   get ':handle', to: 'profiles#show', as: :show_profile
 
   root 'pages#home'
