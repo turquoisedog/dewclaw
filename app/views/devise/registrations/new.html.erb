@@ -9,44 +9,49 @@
   </div>
   <div class="col-12 col-md-6">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
       <div class="form-floating mb-3 w-100">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: " " %>
         <%= f.label :email %>
+        <%= render partial: 'devise/shared/error_message', locals: { resource: resource, field: :email } %>
       </div>
 
       <hr>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.text_field :display_name, class: "form-control", placeholder: "" %>
+        <%= f.text_field :display_name, class: "form-control", placeholder: " " %>
         <%= f.label :display_name %>
+        <%= render partial: 'devise/shared/error_message', locals: { resource: resource, field: :display_name } %>
       </div>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.text_field :handle, class: "form-control", placeholder: "" %>
+        <%= f.text_field :handle, class: "form-control", placeholder: " " %>
         <%= f.label :handle %>
-        <div class="form-text">
-          Your URL slug, and the handle people mention you with.
-        </div>
+        <%= render partial: 'devise/shared/error_message', locals: { resource: resource, field: :handle } %>
+        <% unless resource.errors.include? :handle %>
+          <div class="form-text">
+            Your URL slug, and the handle people mention you with.
+          </div>
+        <% end %>
       </div>
 
       <hr>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: " " %>
         <%= f.label :password %>
+        <%= render partial: 'devise/shared/error_message', locals: { resource: resource, field: :password } %>
       </div>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: " " %>
         <%= f.label :password_confirmation %>
 
+        <%= render partial: 'devise/shared/error_message', locals: { resource: resource, field: :password_confirmation } %>
         <% if @minimum_password_length %>
           <div class="form-text">
             Must be a minimum of <%= @minimum_password_length %> characters.
           </div>
-        <% end %>
+        <% end unless resource.errors.include? :password_confirmation %>
       </div>
 
       <div class="actions d-grid">

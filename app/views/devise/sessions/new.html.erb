@@ -11,12 +11,12 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: " " %>
         <%= f.label :email %>
       </div>
 
       <div class="form-floating mb-3 w-100">
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: " " %>
         <%= f.label :password %>
       </div>
 

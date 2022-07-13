@@ -7,11 +7,9 @@
 <% end %>
 
 <% content_for :body do %>
-  <body class="h-100">
-    <div class="container auth-form-container d-flex">
-      <%= yield %>
-    </div>
-  </body>
+  <div class="container auth-form-container d-flex">
+    <%= yield %>
+  </div>
 <% end %>
 
 <%= render template: 'layouts/application' %>

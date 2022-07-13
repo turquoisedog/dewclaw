@@ -1,6 +1,2 @@
-<% if notice %>
-  <p class="notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert"><%= alert %></p>
-<% end %>
+<%= render partial: 'components/toast', locals: { color: 'primary', content: notice } if notice %>
+<%= render partial: 'components/toast', locals: { color: 'danger', content: alert } if alert %>

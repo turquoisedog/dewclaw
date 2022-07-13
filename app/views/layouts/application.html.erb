@@ -13,16 +13,18 @@
     <%= yield :styles %>
   </head>
 
-  <% if content_for? :body %>
-    <%= yield :body %>
-  <% else %>
-    <body>
-      <%= render 'components/flashes' %>
+  <body>
+    <% if content_for? :body %>
+      <%= yield :body %>
+    <% else %>
+        <div class="container">
+          <%= render 'components/navbar/main' %>
+          <%= yield %>
+        </div>
+    <% end %>
 
-      <div class="container">
-        <%= render 'components/navbar/main' %>
-        <%= yield %>
-      </div>
-    </body>
-  <% end %>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <%= render 'components/flashes' %>
+    </div>
+  </body>
 </html>
