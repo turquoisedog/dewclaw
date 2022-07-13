@@ -1,0 +1,18 @@
+$primary: #4db9c6;
+$secondary: desaturate(#7477b8, 15%);
+$danger: #bf4f7c;
+$warning: #edd86f;
+$success: #8bcfb7;
+$info: #7963ac;
+$body-bg: #0f172a;
+$body-color: white;
+$dark: #1e293b;
+$text-muted: desaturate($secondary, 5%);
+
+$dropdown-dark-bg: darken($dark, 3%);
+$dropdown-dark-link-hover-bg: $dark;
+$dropdown-dark-divider-bg: $dark;
+$dropdown-dark-link-active-bg: darken($dark, 5%);
+
+$input-border-color: lighten($body-bg, 25%);
+$form-check-input-border: 1px solid $input-border-color;

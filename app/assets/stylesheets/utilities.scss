@@ -1,0 +1,15 @@
+@import 'variables';
+
+.vr, hr {
+  background-color: $input-border-color;
+  color: $input-border-color !important;
+  opacity: 100%;
+}
+
+.auth-form-container {
+  max-width: 55rem !important;
+}
+
+.turbo-progress-bar {
+  background-color: $primary;
+}

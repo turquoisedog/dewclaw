@@ -1,0 +1,12 @@
+@import 'variables';
+
+.dropdown-divider {
+  border: none;
+  height: 2px !important;
+  background-color: $dark;
+}
+
+.dropdown-menu {
+  box-shadow: 3px 3px 0 1px $dark;
+  border: none !important;
+}

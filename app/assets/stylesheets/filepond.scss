@@ -1,0 +1,33 @@
+@import 'variables';
+@import 'filepond/dist/filepond';
+
+.filepond--panel-root {
+  background-color: $body-bg;
+  border: 1px solid $input-border-color;
+}
+
+.filepond--drop-label {
+  color: $body-color;
+}
+
+.filepond--label-action {
+  color: $secondary;
+  text-decoration-color: darken($secondary, 5%);
+}
+
+.filepond--item-panel {
+  background-color: $dark;
+}
+
+.filepond--drip-blob {
+  background-color: lighten($body-bg, 25%);
+}
+
+[data-filepond-item-state*='error'] .filepond--item-panel,
+[data-filepond-item-state*='invalid'] .filepond--item-panel {
+  background-color: $danger;
+}
+
+[data-filepond-item-state='processing-complete'] .filepond--item-panel {
+  background-color: $success;
+}

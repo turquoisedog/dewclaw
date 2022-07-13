@@ -1,0 +1,12 @@
+@import 'variables';
+
+.brand-text {
+  font-family: "Hatch", sans-serif;
+  background: linear-gradient(90deg, #48c2c5, #6890cb, #7477b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1.brand-text {
+  font-size: 4rem !important;
+}
